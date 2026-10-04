@@ -1,7 +1,7 @@
 //
 // --------------------------------------------------------------------------
 // CoolSUUpdater.m
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2024
 // Licensed under MIT
 // --------------------------------------------------------------------------

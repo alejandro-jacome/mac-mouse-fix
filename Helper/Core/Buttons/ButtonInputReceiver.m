@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // ButtonInputReceiver.m
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2019
-// Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -139,7 +139,7 @@ static CGEventRef eventTapCallback(CGEventTapProxy proxy, CGEventType type, CGEv
     ///     On getting the sending device:
     ///     - There is an "old Method" and a "new Method"
     ///     - How does old method work? - For the old method, we registered input callbacks on the HIDDevices and put those low level inputs in with co-occuring CGEvents to find which device sent a CGEvent
-    ///     - Why switch away from old method? - Under Ventura I think the HID callback API broke for some devices. See https://github.com/noah-nuebling/mac-mouse-fix/issues/424. I remember similar bugs in the API in older macOS versions a few years back.
+    ///     - Why switch away from old method? - Under Ventura I think the HID callback API broke for some devices. See https://github.com/noah-mateo/mac-mouse-fix/issues/424. I remember similar bugs in the API in older macOS versions a few years back.
     ///     - Some time after moving to the newMethod I deleted the old method. You can still find it in ButtonInputReceiver_old.m and in the the MMF 1 and MMF 2 source. We might have moved away from it under MMF 2 as well to fix Ventura problems, not sure.
 
     IOHIDDeviceRef iohidDevice = CGEventGetSendingDevice(event);

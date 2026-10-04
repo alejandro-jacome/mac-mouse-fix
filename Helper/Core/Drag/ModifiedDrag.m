@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // ModifyingActions.m
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2020
-// Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -422,7 +422,7 @@ static void handleMouseInputWhileInitialized(int64_t deltaX, int64_t deltaY, CGP
         /// -> Don't use `naturalDirection` before state switches to `kMFModifiedInputActivationStateInUse`!
         /// TODO: Build UI for this
         /// Edit:
-        ///   Lot's of people complained about this in 3.0.0 Beta 6. See https://github.com/noah-nuebling/mac-mouse-fix/issues?q=is%3Aissue+is%3Aopen+label%3A%223.0.0+Beta+6+Click+and+Drag+Direction%22
+        ///   Lot's of people complained about this in 3.0.0 Beta 6. See https://github.com/noah-mateo/mac-mouse-fix/issues?q=is%3Aissue+is%3Aopen+label%3A%223.0.0+Beta+6+Click+and+Drag+Direction%22
         ///   It think reading the userdefaults didn't work properly for many users. So we're disabling this now until we build the UI for it.
         /// Edit2: The problem was that the it fell back to naturalDirection = false when the userDefaults didn't contain a value for `com.apple.swipescrolldirection`, which is the case if the user has never edited the `natural scroll direction` system setting. But if `com.apple.swipescrolldirection` doesn't exist, then the scroll direction is actually natural on Apple Trackpad and Magic Mouse. So if we fall back to natural scroll direction, it should match Trackpad/Magic mouse behaviour and users should be happy.
     

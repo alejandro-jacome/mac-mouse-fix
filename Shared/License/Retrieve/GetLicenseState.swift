@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // MFLicenseState.swift
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2024
-// Licensed under Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -476,7 +476,7 @@ import CryptoKit
             ///         Generally, we want to err on the side of `LicenseValidityFromServer.unsure`, and only use `LicenseValidityFromServer.invalid` when we're *absolutely* sure that the license is invalid.
             ///         That's because if we set the value to`.invalid` we consider the app *definitively*unlicensed and then lock it down immediately (in case the free days have been used up), which makes for a really annoying user experience if there's a false positive on `.invalid` due to an internal server error or something.
             ///         If instead, we have a false positive on `.unsure` then we just fall back to the cached value for whether the app is licensed or not, which should make for a much less disruptive user experience.
-            ///         Actually, as I'm working on this, (Oct 9 2024) I got a [GitHub Issue](https://github.com/noah-nuebling/mac-mouse-fix/issues/1136) from a user saying they regularly have their app locked down and they have to re-enter their license. (I think I also saw reports like this before.) Hopefully that stuff is fixed now.
+            ///         Actually, as I'm working on this, (Oct 9 2024) I got a [GitHub Issue](https://github.com/noah-mateo/mac-mouse-fix/issues/1136) from a user saying they regularly have their app locked down and they have to re-enter their license. (I think I also saw reports like this before.) Hopefully that stuff is fixed now.
             
             let serverSuccess: Bool? = serverResponseDict["success"] as? Bool
             var isValidKey: LicenseValidityFromServer

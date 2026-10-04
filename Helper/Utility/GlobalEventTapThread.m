@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // EventTapQueue.m
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2022
-// Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -126,7 +126,7 @@ static MFGate *_startGate;
 
     /// Setup thread
     _thread = [[NSThread alloc] initWithTarget:self selector:@selector(threadWorkload) object:nil];
-    _thread.name = @"com.nuebling.mac-mouse-fix.global-event-tap";
+    _thread.name = @"com.mateo.mac-mouse-fix.global-event-tap";
     _thread.qualityOfService = NSQualityOfServiceUserInteractive;
     _thread.threadPriority = 1.0;
     [_thread start];

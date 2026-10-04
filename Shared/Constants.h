@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // Constants.h
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2020
-// Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -32,8 +32,8 @@ typedef enum {
 /// Bundles and Bezelservices
 
 /// Added some x's to the bundleID. See notes.md for context.
-#define kMFBundleIDApp      @"com.nuebling.mac-mouse-fix"
-#define kMFBundleIDHelper   @"com.nuebling.mac-mouse-fix.helper"
+#define kMFBundleIDApp      @"com.mateo.mac-mouse-fix"
+#define kMFBundleIDHelper   @"com.mateo.mac-mouse-fix.helper"
 
 //#define kMFRelativeAccomplicePath           @"Contents/Library/LaunchServices/Mac Mouse Fix Accomplice"
 #define kMFRelativeHelperAppPath            @"Contents/Library/LoginItems/Mac Mouse Fix Helper.app"
@@ -52,7 +52,7 @@ typedef enum {
 /// ^ The old value "mouse.fix.helper" was also used with the old prefpane version which could lead to conflicts. See Mail beginning with 'I attached the system log. Happening with this version too'. Edit: We moved back to the old `mouse.fix.helper` label for the app version of Mac Mouse Fix. Reasoning:
 ///      We meant to move the launchd label over to a new one to avoid conlicts when upgrading from the old prefpane, but I think it can actually lead to more complications. Also we'd fragment things, because the first few versions of the app version already shipped with the old "mouse.fix.helper" label.
 
-#define kMFLaunchdHelperIdentifierSM  @"com.nuebling.mac-mouse-fix.helper"
+#define kMFLaunchdHelperIdentifierSM  @"com.mateo.mac-mouse-fix.helper"
 /// ^ Keep this in sync with `sm_launchd.plist`
 /// ^ We finally moved to this new label when moving to the new Service Management API for enabling the Helper as background task for Ventura.
 /// We experienced strange issues when using the old label, so we're giving this new one a try.
@@ -79,9 +79,9 @@ typedef enum {
 
 /// Web URLs
 
-#define kMFWebsiteAddress  @"https://noah-nuebling.github.io/mac-mouse-fix-website"
-#define kMFWebsiteRepoAddressRaw @"https://raw.githubusercontent.com/noah-nuebling/mac-mouse-fix-website/gh-pages"
-#define kMFUpdateFeedRepoAddressRaw @"https://raw.githubusercontent.com/noah-nuebling/mac-mouse-fix/update-feed"
+#define kMFWebsiteAddress  @"https://noah-mateo.github.io/mac-mouse-fix-website"
+#define kMFWebsiteRepoAddressRaw @"https://raw.githubusercontent.com/noah-mateo/mac-mouse-fix-website/gh-pages"
+#define kMFUpdateFeedRepoAddressRaw @"https://raw.githubusercontent.com/noah-mateo/mac-mouse-fix/update-feed"
 #define kMFLicenseInfoURLSub @"licenseinfo/config.json"
 
 /// Sparkle

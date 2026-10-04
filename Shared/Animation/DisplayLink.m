@@ -1,9 +1,9 @@
 //
 // --------------------------------------------------------------------------
 // DisplayLink.m
-// Created for Mac Mouse Fix (https://github.com/noah-nuebling/mac-mouse-fix)
+// Created for Mac Mouse Fix (https://github.com/noah-mateo/mac-mouse-fix)
 // Created by Noah Nuebling in 2021
-// Licensed under the MMF License (https://github.com/noah-nuebling/mac-mouse-fix/blob/master/License)
+// Licensed under the MMF License (https://github.com/noah-mateo/mac-mouse-fix/blob/master/License)
 // --------------------------------------------------------------------------
 //
 
@@ -149,10 +149,10 @@
 ///         [Aug 2025] We're calling CVDisplayLinkStart() and CVDisplayLinkStop() from the mainThread, and apparently that fixed some issues, we also had some external doc that suggested mainThread should be used for some things. (See notes where we call CVDisplayLinkStart()/CVDisplayLinkStop()). I also just saw that CVDisplayLink is non-sendable.
 ///             - My guess rn would be that each CVDisplayLink instance should only be interacted with from one thread.
 ///             - On which threads is this called? [Aug 2025]
-///                 - `[GestureScrollSimulator initialize]` calls this on `com.nuebling.mac-mouse-fix.helper.display-link` queue,
+///                 - `[GestureScrollSimulator initialize]` calls this on `com.mateo.mac-mouse-fix.helper.display-link` queue,
 ///                 - `[Scroll load_Manual]` calls this on mainThread.
 ///                 - `[ModifiedDragOutputTwoFingerSwipe load_Manual]` calls this on the mainThread.
-///                 - If the displayLink is recreated after detaching/reattaching a display, it seems to always run on `com.nuebling.mac-mouse-fix.helper.display-link` (Haven't done too much testing or thinking here.)
+///                 - If the displayLink is recreated after detaching/reattaching a display, it seems to always run on `com.mateo.mac-mouse-fix.helper.display-link` (Haven't done too much testing or thinking here.)
 ///                 - (Haven't tested anything else)
 ///             - Other thought: Since this is only called rarely, (and I think always *before* that displayLink is actually used) race-conditions might be rare. But rare issues match the sporadic nature of the `scrolling-stops-intermittently_apr-2025.md` issues, and CVDisplayLinkStart()/CVDisplayLinkStop() did randomly fail when we called them from a non-main-thread according to the notes
 ///                 ... but my gut feeling is that it's not about race-conditions.
